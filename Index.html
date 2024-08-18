@@ -3,51 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body> 
-    <div class="encabezado">
-        <img src="./assets/LOGO_GRIS SIN FONDO.png" alt="LOGO_AZUL">
-        <h1>CALCULA TU CUOTA</h1>
+<body>
+    <img class="img" src="./assets/logo.png" alt="LOGO_AZUL">
+    <div class="text">
+     <h1>CALCULÁ TU CUOTA</h1>
     </div>
-    <div class="container">
-         <div class="precio_bc">
-        <h2 class="cotizacion">COTIZACION<br>BOLSA DE CEMENTO <br><br>$9500</h2>
-        </div>
-
-    <section class="calculator">
-        <div id="calculator">
+    <div class="price">
+    <label >El valor de referencia de la bolsa de cemento a la fecha es de $10.305<label class="aste">*</label></label>
+    </div>
+        <section class="calculator">
+        <div id="calculator container">
         <input type="text" id="display" disabled>
-        <br />
-        <button id="ac" class="operator">AC</button>
-        <button id="de" class="operator">DE</button>
-        <button id="." class="operator">.</button>
-        <button id="/" class="operator">/</button>
-        <br />
-        <button id="7">7</button>
-        <button id="8">8</button>
-        <button id="9">9</button>
-        <button id="*" class="operator">*</button>
-        <br />
-        <button id="4">4</button>
-        <button id="5">5</button>
-        <button id="6">6</button>
-        <button id="-" class="operator">-</button>
-        <br />
+        <br/>
+        <div class="container">
+        <button id="ac" class="operator"><p class="container_text">AC</p></button>
+        <button id="de" class="operator"><p class="container_text">←</p></button>
+        <button id="." class="operator">,</button>
+        <br/>
         <button id="1">1</button>
         <button id="2">2</button>
         <button id="3">3</button>
-        <button id="+" class="operator">+</button>
-        <br />
-        <button id="9500" class="BC">BC</button>
+        <br/> 
+        <button id="4">4</button>
+        <button id="5">5</button>
+        <button id="6">6</button>
+        <br/>
+        <button id="7">7</button>
+        <button id="8">8</button>
+        <button id="9">9</button>
+        <br/> 
         <button id="0">0</button>
-        <button id="=" class="equal operator">=</button>
+        <button id="00" class="textt">00</button>
+        <button id="=" class="BC"><p class="container_text">BC</p></button>
+    </div>
+    </div>
+    </section>
+    <section>
+        <div class="container">
+        <p class="total" id="style" style="color: rgb(255, 255, 255); display: none;">EL VALOR DE TU CUOTA ESTE MES EQUIVALE A $ <label class="total"><span id="total" style="color: rgb(255, 255, 255)"></span></label></p>
+        </div>
+        <div style="font: 300 18px/1.6 poppins" class="date">
+            <div id="reloj"></div>
+             <div>
+                <script>
+                //<![CDATA[
+                var  today = new Date();
+                var m = today.getMonth()+1;
+                var mes = (m < 10) ? '0' + m : m;
+               document.write(today.getDate(),'/' +mes,'/'+ 24);
+                //]]> 
+                </script></div>   
+        </div>
+        <br><br>
+        <div class="container">
+            <label>*Una vez realizado el pago envíe el comprobante para la acreditación del mismo.<br>
+                   *La cotización indicada es únicamente válida para el día de la fecha y puede ser ajustada en virtud del <a class="a" href="https://materialesandersen.com.ar/corralon-de-materiales/obra-gruesa/articulos-bolsas/cemento-avellaneda-x-50-kg/">índice de referencia. </a><br>
+            </label>
         </div>
     </section>
-    </div>
+<footer class="footer">
+    <section class="footer_copy container">
+    <div class="footer_social">
+        <a href="https://www.instagram.com/grupourbanodesarrollos/" class="footer_icon"><img src="./assets/insta.svg" class="footer_img "></a>
+        <a href="https://www.facebook.com/grupourbanodesarrollos/" class="footer_icon"><img src="./assets/facebook.svg" class="footer_img "></a>
+        <a href="https://acortar.link/WhatsAppGrupoUrbano " class="footer_icon"><img src="./assets/whatsapp.svg" class="footer_img "></a>
+        <a href="#" class="footer_icon"><img src="./assets/video.svg" class="footer_img "></a>
     
-    <script src="scripts.js"></script>
+    </div>
+   
+    <h3><a href="https://www.gudesarrollos.com.ar/" class="footer_copyright">www.gudesarrollos.com</a></h3>
+    </section>
+</footer>
+    <script src="./script/scripts.js"></script>
 </body>
 </html>
